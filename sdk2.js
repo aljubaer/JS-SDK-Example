@@ -18,7 +18,7 @@ function dropinLoader () {
             </button>
                 <h3>`+merchantName +`</h3>
                 <p>You are currently viewing popup box 1.</p>
-                <button onclick="window.location.href = 'https://www.facebook.com';">Bkash</button>
+                <button id="bKash_button">Bkash</button>
                 <button onclick="window.location.href = 'https://www.google.com';">Sure Cash</button>
                 <p>Pay `+amount+` BDT.</p>
             </div>
