@@ -3,31 +3,41 @@
 
 function dropinLoader () {
 
+    let merchantName = "Test Merchant";
+    let amount = 220;
 
 
     var dropin =
     `
-    <div id="popupBoxOnePosition" style="top: 0; left: 0; position: fixed; width: 100%; height: 120%;
-    background-color: rgba(0,0,0,0.7); display: none;">
-<div class="popupBoxWrapper" style="width: 550px; margin: 50px auto; text-align: left;">
-    <div class="popupBoxContent" style="background-color: #FFF; padding: 15px;">
-        <h3>Popup Box 1</h3>
-        <p>You are currently viewing popup box 1.</p>
-        <button onclick="window.location.href = 'https://www.facebook.com';">Bkash</button>
-        <button onclick="window.location.href = 'https://www.google.com';">Sure Cash</button>
-        <p>Click <a href="javascript:void(0)" onclick="toggle_visibility('popupBoxOnePosition');">here</a> to close popup box one.</p>
+    <div id="popupBoxOnePosition" style="top: 0; left: 0; position: fixed; width: 100%; height: 120%; background-color: rgba(0,0,0,0.7); display: none;">
+        <div class="popupBoxWrapper" style="width: 550px; margin: 50px auto; text-align: left;">
+        
+            <div class="popupBoxContent" style="background-color: #FFF; padding: 15px;">
+            <button onclick="toggle_visibility('popupBoxOnePosition');" style="position: relative; float: right; background: red; color: white; top: -10px; right: -10px; cursor: pointer;">
+            X   
+            </button>
+                <h3>`+merchantName +`</h3>
+                <p>You are currently viewing popup box 1.</p>
+                <button onclick="window.location.href = 'https://www.facebook.com';">Bkash</button>
+                <button onclick="window.location.href = 'https://www.google.com';">Sure Cash</button>
+                <p>Pay `+amount+` BDT.</p>
+            </div>
+        </div>
     </div>
-</div>
-</div>
 
 
 
-<div id="wrapper">
-
-<p>Click <a href="javascript:void(0)" onclick="toggle_visibility('popupBoxOnePosition');">here</a> to see popup box one.</p>
+    <div id="wrapper">
 
 
-</div>
+        <!-- Button to start to popup -->
+        <button>
+            <a style="text-decoration:none; color:#000000" href="javascript:void(0)" onclick="toggle_visibility('popupBoxOnePosition');">Pay with Dupay</a>
+        </button>
+
+
+
+    </div>
     
     `
 
