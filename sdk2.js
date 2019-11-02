@@ -27,11 +27,11 @@ function dropinLoader () {
                         <div style="padding: 10px; text-align: center;">
                             <div>
                                 <div>Account Number: </div> 
-                                <input type="tel" name="fname" style="width:300px; text-align: center;" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                                <input type="tel" name="fname" id="sureCashNo" style="width:300px; text-align: center;" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                             </div>
                             <br>
                             <div>
-                                <button style="width:300px; ">Pay</button>
+                                <button style="width:300px;" onclick="paySureCash()">Pay</button>
                             </div>
                         </div>
 
